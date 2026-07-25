@@ -1,4 +1,23 @@
 package tests;
 
-public class LoginTest {
+import base.BaseTest;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages.LoginPage;
+
+public class LoginTest extends BaseTest {
+
+    @Test
+    public void successfulLoginTest(){
+
+        driver.get("https://www.saucedemo.com/");
+
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.loginAs("standard_user", "secret_sauce");
+
+        String currentUrl = driver.getCurrentUrl();
+        Assert.assertTrue(currentUrl.contains("inventory.html"));
+
+    }
 }

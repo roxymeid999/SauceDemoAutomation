@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utils.WaitUtils;
 
 public class BasePage {
 
@@ -17,11 +18,14 @@ public class BasePage {
     }
 
     public void click(By locator) {
-        findElement(locator).click();
+
+        WebElement element = WaitUtils.waitForElementToBeClickable(driver, locator, 10);
+        element.click();
     }
 
     public void type(By locator, String text) {
-        WebElement element = findElement(locator);
+
+        WebElement element = WaitUtils.waitForElementToBeVisible(driver, locator, 10);
         element.clear();
         element.sendKeys(text);
     }

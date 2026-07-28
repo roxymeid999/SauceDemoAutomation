@@ -29,4 +29,8 @@ public class BasePage {
     public String getPageTitle() {
         return driver.getTitle();
     }
+
+    protected String getText(By locator) {
+        return findElement(locator).getText();
+    }
 }

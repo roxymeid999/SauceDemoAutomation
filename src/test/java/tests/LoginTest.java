@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void successfulLoginTest(){
 
-        driver.get("https://www.saucedemo.com/");
+      //  driver.get("https://www.saucedemo.com/");
 
         LoginPage loginPage = new LoginPage(driver);
 

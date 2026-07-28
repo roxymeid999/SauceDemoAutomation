@@ -22,6 +22,7 @@ public class CartPage extends BasePage {
         click(checkoutBtn);
         // Navigates to a different page → return the new page object
         return new CheckoutInfoPage(driver);
+    }
 
         public String getProductName() {
             return findElement(productName).getText();
@@ -35,4 +36,3 @@ public class CartPage extends BasePage {
             return findElement(productDescription).getText();
         }
     }
-}

@@ -4,13 +4,14 @@ import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import utils.ConfigReader;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    @Test(groups = { "smoke", "regression" })
     public void successfulLoginTest(){
 
-      //  driver.get("https://www.saucedemo.com/");
+        driver.get(ConfigReader.getProperty("loginUrl"));
 
         LoginPage loginPage = new LoginPage(driver);
 

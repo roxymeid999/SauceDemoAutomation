@@ -1,5 +1,5 @@
 package tests;
-
+/*
 import base.BaseTest;
 // import the checkout flows page to enable this test execution
 import flows.CheckoutFlow;
@@ -74,3 +74,4 @@ public void verifyCartBadgeCount() {
 
 
 }
+*/

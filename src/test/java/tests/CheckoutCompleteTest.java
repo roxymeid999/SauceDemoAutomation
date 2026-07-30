@@ -40,9 +40,9 @@ public class CheckoutCompleteTest extends BaseTest {
     @Test(priority = 1, groups = { "regression" })
     public void checkoutCompleteOrderConfirmationButtonsTest(){
 
-        driver.get("https://www.saucedemo.com/");
+        driver.get(ConfigReader.getProperty("loginUrl"));
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginAs("standard_user", "secret_sauce");
+        loginPage.loginAs(ConfigReader.getProperty("username"), ConfigReader.getProperty("password"));
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("inventory.html"));
 

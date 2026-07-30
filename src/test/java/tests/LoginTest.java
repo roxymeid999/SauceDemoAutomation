@@ -11,8 +11,6 @@ public class LoginTest extends BaseTest {
     @Test(groups = { "smoke", "regression" })
     public void successfulLoginTest(){
 
-        driver.get(ConfigReader.getProperty("loginUrl"));
-
         LoginPage loginPage = new LoginPage(driver);
 
         loginPage.loginAs("standard_user", "secret_sauce");

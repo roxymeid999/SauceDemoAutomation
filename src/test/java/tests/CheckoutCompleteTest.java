@@ -12,7 +12,7 @@ import static org.testng.TestRunner.PriorityWeight.priority;
 
 public class CheckoutCompleteTest extends BaseTest {
 
-    @Test(priority = 1, groups = { "smoke", "regression" })
+    @Test(priority = 1, groups = { "regression" })
     public void checkoutCompleteOrderConfirmationMessageTest(){
 
         driver.get(ConfigReader.getProperty("loginUrl"));

@@ -23,7 +23,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        driver.get(ConfigReader.getProperty("loginUrl"));
+        driver.get("https://www.saucedemo.com/");
 
     }
 

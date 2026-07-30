@@ -20,7 +20,7 @@ public class BrowserOptions {
                 options.addArguments("--disable-sync");
                 options.addArguments("--incognito");
 
-                // Обязательные флаги для запуска в Jenkins (без графического интерфейса)
+                // Обязательные аргументы для запуска ChromeDriver в Jenkins / Linux / Windows Service
                 options.addArguments("--headless=new");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");

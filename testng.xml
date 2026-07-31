@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="SauceDemo Test Suite">
-    <test name="All regression tests">
-        <classes>
-            <class name="tests.CheckoutCompleteTest"/>
-            <class name="tests.LoginTest"/>
-        </classes>
-    </test>
-</suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/Users/lisah/Desktop/Project_Folder/SauceDemoAutomation/src"><classes><class name="tests.CartTest"><methods><include name="addProductToCartTest"/></methods></class><class name="tests.CheckoutOverviewTest"><methods><include name="verifyCheckoutOverviewBrowserTab"/><include name="verifyCheckoutOverviewPageHeading"/><include name="verifyCartBadgeMatchesDisplayedProductCount"/><include name="verifySelectedProductAppearsOnOverviewPage"/><include name="verifySelectedProductPrice"/><include name="verifyItemTotalMatchesDisplayedProductPrices"/><include name="verifyTotalEqualsItemTotalPlusTax"/><include name="verifyFinishAndCancelButtons"/></methods></class></classes></test></suite>

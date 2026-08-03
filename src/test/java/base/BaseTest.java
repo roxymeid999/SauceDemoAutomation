@@ -15,6 +15,11 @@ public class BaseTest {
 
     protected WebDriver driver;
 
+    //Create a method for the listener
+    public WebDriver getDriver() {
+        return driver;
+    }
+
     @BeforeMethod (alwaysRun = true)
     public void setUp() {
         WebDriverManager.chromedriver().setup();

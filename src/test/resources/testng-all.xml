@@ -3,7 +3,6 @@
 
 <suite name="SauceDemo Test Suite">
     <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
         <listener class-name="listeners.TestListener"/>
     </listeners>
 

@@ -4,7 +4,6 @@
 <suite name="SauceDemo Smoke Suite">
 
     <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
         <listener class-name="listeners.TestListener"/>
     </listeners>
 

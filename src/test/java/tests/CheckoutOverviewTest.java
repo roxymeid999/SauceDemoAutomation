@@ -51,12 +51,12 @@ public class CheckoutOverviewTest extends BaseTest {
     }
 
     //Validation: Page heading displays Checkout: Overview
-    @Test
+    @Test (priority = 1, groups = { "regression" })
     public void verifyCheckoutOverviewPageHeading() {
 
         Assert.assertEquals(
                 checkoutOverviewPage.getPageHeading(),
-                "Checkout: Overview",
+                "Checkout: Something",
                 "Checkout Overview heading is incorrect."
         );
     }

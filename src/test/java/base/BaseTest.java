@@ -15,7 +15,12 @@ public class BaseTest {
 
     protected WebDriver driver;
 
-    @BeforeMethod
+    //Create a method for the listener
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+    @BeforeMethod (alwaysRun = true)
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(BrowserOptions.getOptions());
@@ -25,7 +30,7 @@ public class BaseTest {
 
     }
 
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void tearDown() {
 
         if (driver != null) {
